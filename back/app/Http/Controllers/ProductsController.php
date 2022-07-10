@@ -30,7 +30,10 @@ class ProductsController extends Controller
       file_put_contents($path,$decoded);
 
 
-    $product = Product::create($request->except('image') + ['user_id' => Auth::id()]);
+    $product = Product::create($request->except('image') +
+        ['user_id' => Auth::id(),
+    'image' => $fileName
+        ]);
     return $product;
   }
 

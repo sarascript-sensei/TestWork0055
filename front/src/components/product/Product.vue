@@ -1,7 +1,7 @@
 <template>
   <div class="col-md-4">
     <div class="thumbnail">
-      <img src="https://cdn2.iconfinder.com/data/icons/marketing-25/64/product_presentation-256.png" alt="">
+      <img :src="'http://localhost:8000/' + product.image" alt="">
       <div class="caption">
         {{ product.user_id }}
         <h3>{{ product.name }}</h3>
